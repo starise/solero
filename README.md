@@ -53,6 +53,9 @@ wp plugin activate solero
 * **Google Analytics** ([more info](https://github.com/roots/soil/wiki/Google-Analytics))
   `add_theme_support('solero-google-analytics', 'UA-XXXXX-Y');`
 
+* **Google Fonts**
+  `add_theme_support('solero-google-fonts', ['Open Sans' => '400,700']);`
+
 * **Move all JS to the footer**
   `add_theme_support('solero-js-to-footer');`
 

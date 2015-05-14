@@ -1,3 +1,6 @@
+### 1.1.0: May 14th, 2015
+* Add module Google Fonts
+
 ### 1.0.0: May 14th, 2015
 * Fork Roots [Soil](https://github.com/roots/soil)
 * Add module Clean-up
