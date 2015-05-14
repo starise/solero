@@ -38,26 +38,26 @@ wp plugin activate solero
 
 ## Modules
 
-* **Load jQuery from the Google CDN**<br>
+* **Load jQuery from the Google CDN**
   `add_theme_support('solero-jquery-cdn');`
 
-* **Cleaner WordPress markup**<br>
+* **Cleaner WordPress markup**
   `add_theme_support('solero-clean-up');`
 
-* **Cleaner walker for navigation menus**<br>
-  `add_theme_support('solero-nav-walker');`
+* **Cleaner walker for navigation menus**
+`add_theme_support('solero-nav-walker');`
 
-* **Root relative URLs**<br>
+* **Root relative URLs**
   `add_theme_support('solero-relative-urls');`
 
-* **Google Analytics** ([more info](https://github.com/roots/soil/wiki/Google-Analytics))<br>
+* **Google Analytics** ([more info](https://github.com/roots/soil/wiki/Google-Analytics))
   `add_theme_support('solero-google-analytics', 'UA-XXXXX-Y');`
 
-* **Move all JS to the footer**<br>
+* **Move all JS to the footer**
   `add_theme_support('solero-js-to-footer');`
 
-* **Disable trackbacks**<br>
+* **Disable trackbacks**
   `add_theme_support('solero-disable-trackbacks');`
 
-* **Disable asset versioning**<br>
+* **Disable asset versioning**
   `add_theme_support('solero-disable-asset-versioning');`
