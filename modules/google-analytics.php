@@ -13,8 +13,10 @@ function load_script()
 {
 	$gaID = options('gaID');
 	if (!$gaID) { return; }
-	$loadGA = (!defined('WP_ENV') || \WP_ENV === 'production') && !current_user_can('manage_options');
-	$loadGA = apply_filters('solero/loadGA', $loadGA);
+	$loadGA   = (!defined('WP_ENV') || \WP_ENV === 'production') && !current_user_can('manage_options');
+	$loadGA   = apply_filters('solero/loadGA', $loadGA);
+	$cookieGA = true;
+	$cookieGA = apply_filters('solero/cookieGA', $cookieGA);
 	?>
 	<script>
 		<?php if ($loadGA) : ?>
@@ -23,7 +25,11 @@ function load_script()
 			(function(so,le,r,o){so.ga=function(){so.ga.q.push(arguments);if(le['log'])le.log(r+o.call(arguments))}
 			so.ga.q=[];so.ga.o=+new Date;}(window,console,'Google Analytics: ',[].slice))
 		<?php endif; ?>
-		ga('create','<?= $gaID; ?>','auto');ga('send','pageview')
+		ga('create','<?= $gaID; ?>','auto');
+		<?php if (!$cookieGA) : ?>
+		ga('set', 'anonymizeIp', true);
+		<?php endif; ?>
+		ga('send','pageview');
 	</script>
 	<?php if ($loadGA) : ?>
 		<script src="https://www.google-analytics.com/analytics.js" async defer></script>
