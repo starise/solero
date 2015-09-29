@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Solero
-Plugin URI:  https://bitbucket.org/starise/solero
+Plugin URI:  https://github.com/starise/solero
 Description: A collection of modules to apply theme-agnostic front-end modifications to WordPress.
 Version:     1.1.0
 Author:      starise

@@ -9,24 +9,11 @@ Theme-agnostic modules collection for Wordpress
 
 ### Installation
 
-Add Solero repository to `composer.json` file.
-
-```json
-"repositories": [
-  {
-    "type": "git",
-     "url": "git@bitbucket.org:starise/solero.git"
-  }
-],
-```
-
-You can now require the package using composer.
+Add Solero to project's dependencies using Composer.
 
 ```sh
 composer require starise/solero dev-master
 ```
-
-The password to access the private repository is necessary.
 
 ### Activation
 
