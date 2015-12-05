@@ -15,7 +15,7 @@ use starise\Solero\Utils;
  *   <li class="menu-home"><a href="/">Home</a></li>
  *   <li class="menu-sample-page"><a href="/sample-page/">Sample Page</a></li>
  *
- * You can enable/disable this feature in functions.php (or lib/config.php if you're using Sage):
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Sage):
  * add_theme_support('solero-nav-walker');
  */
 class NavWalker extends \Walker_Nav_Menu
@@ -64,6 +64,7 @@ class NavWalker extends \Walker_Nav_Menu
 	{
 		$slug = sanitize_title($item->title);
 
+		// Fix core `active` behavior for custom post types
 		if ($this->cpt) {
 			$classes = str_replace('current_page_parent', '', $classes);
 
@@ -72,17 +73,25 @@ class NavWalker extends \Walker_Nav_Menu
 			}
 		}
 
+		// Remove most core classes
 		$classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', 'active', $classes);
 		$classes = preg_replace('/^((menu|page)[-_\w+]+)+/', '', $classes);
 
-		$classes[] = 'menu-item menu-' . $slug;
+		// Re-add core `menu-item` class
+		$classes[] = 'menu-item';
+
+		// Re-add core `menu-item-has-children` class on parent elements
+		if ($item->is_subitem) {
+			$classes[] = 'menu-item-has-children';
+		}
+
+		// Add `menu-<slug>` class
+		$classes[] = 'menu-' . $slug;
 
 		$classes = array_unique($classes);
+		$classes = array_map('trim', $classes);
 
-		return array_filter($classes, function ($element) {
-			$element = trim($element);
-			return !empty($element);
-		});
+		return array_filter($classes);
 	}
 }
 

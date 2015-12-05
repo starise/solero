@@ -7,7 +7,7 @@ namespace starise\Solero\NiceSearch;
  *
  * @link http://txfx.net/wordpress-plugins/nice-search/
  *
- * You can enable/disable this feature in functions.php (or lib/config.php if you're using Sage):
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Sage):
  * add_theme_support('solero-nice-search');
  */
 function redirect()

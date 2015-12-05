@@ -5,7 +5,7 @@ namespace starise\Solero\GoogleFonts;
 /**
  * Add requested Google Fonts in head
  *
- * You can enable/disable this feature in functions.php (or lib/config.php if you're using Sage):
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Sage):
  * add_theme_support(
  *	'solero-google-fonts',
  *	[

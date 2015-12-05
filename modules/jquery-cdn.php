@@ -5,7 +5,7 @@ namespace starise\Solero\JqueryCDN;
 /**
  * Load jQuery from Google's CDN with a local fallback
  *
- * You can enable/disable this feature in functions.php (or lib/config.php if you're using Sage):
+ * You can enable/disable this feature in functions.php (or lib/setup.php if you're using Sage):
  * add_theme_support('solero-jquery-cdn');
  */
 function register_jquery()
