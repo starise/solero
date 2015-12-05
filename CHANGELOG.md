@@ -1,3 +1,6 @@
+### 1.1.2: December 5, 2015
+* Reflect Soil 3.6.0 [changes](https://github.com/roots/soil/releases/tag/3.6.0)
+
 ### 1.1.1: September 29, 2015
 * Reflect Soil 3.5.0 [changes](https://github.com/roots/soil/releases/tag/3.5.0)
 

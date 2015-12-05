@@ -3,7 +3,7 @@
 Plugin Name: Solero
 Plugin URI:  https://github.com/starise/solero
 Description: A collection of modules to apply theme-agnostic front-end modifications to WordPress.
-Version:     1.1.1
+Version:     1.1.2
 Author:      starise
 Author URI:  http://stari.se/
 
@@ -69,4 +69,4 @@ function load_modules()
 		}
 	}
 }
-add_action('after_setup_theme', __NAMESPACE__ . '\\load_modules');
+add_action('after_setup_theme', __NAMESPACE__ . '\\load_modules', 100);
